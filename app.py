@@ -24,6 +24,7 @@ themes_unique = np.sort(sets_data.parent_theme_name.unique()).tolist()
 checklist_dict = [{key:theme for key in ['label','value']} for theme in sets_data.parent_theme_name.unique().tolist()]
 
 app = Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
 
 # consists of tree of components defining the layout
 app.layout = html.Div(className='row',children=[
