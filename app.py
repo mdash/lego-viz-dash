@@ -38,48 +38,48 @@ app.layout = html.Div(className='row',children=[
        style={'background-color':'whitesmoke'},
     children=[
     
-    html.Div(className='ten columns offset-by-one',
-    style={'margin-top':35},
-    children=[
-    html.Label(dcc.Markdown('**Timeline:**')),
-    dcc.RangeSlider(
-        count=1,
-        min=min_year,
-        max=max_year,
-        step=1,
-        marks={i: str(i) for i in range(min_year, max_year+1,10)},
-        value=[1960,1990],
-        allowCross=False,
-        id='year-slider'
-    )]),
+                html.Div(className='ten columns offset-by-one',
+                style={'margin-top':35},
+                children=[
+                html.Label(dcc.Markdown('**Timeline:**')),
+                dcc.RangeSlider(
+                    count=1,
+                    min=min_year,
+                    max=max_year,
+                    step=1,
+                    marks={i: str(i) for i in range(min_year, max_year+1,10)},
+                    value=[1960,1990],
+                    allowCross=False,
+                    id='year-slider'
+                )]),
 
-    html.Div(className='ten columns offset-by-one',
-    style={'margin-top':35},
-    children=[
-    html.Label(dcc.Markdown('**Number of Pieces:**')),
-    dcc.RangeSlider(
-        count=1,
-        min=min_parts,
-        max=max_parts,
-        step=1,
-        marks={i: str(i) for i in range(min_parts, max_parts+1,1000)},
-        value=[0,5000],
-        allowCross=False,
-        id='num-parts-slider'
-    ),]),
+                html.Div(className='ten columns offset-by-one',
+                style={'margin-top':35},
+                children=[
+                html.Label(dcc.Markdown('**Number of Pieces:**')),
+                dcc.RangeSlider(
+                    count=1,
+                    min=min_parts,
+                    max=max_parts,
+                    step=1,
+                    marks={i: str(i) for i in range(min_parts, max_parts+1,1000)},
+                    value=[0,5000],
+                    allowCross=False,
+                    id='num-parts-slider'
+                ),]),
 
 
-    html.Div(className='ten columns offset-by-one',
-    style={'margin-top':35},    
-    children=[
-    html.Label(dcc.Markdown('**LEGO Themes:**')),
-    dcc.Checklist(
-                    options=checklist_dict,
-                    value=themes_unique,
-                    id='themes-checkbox'
-                )
-    ])
-    ]),
+                html.Div(className='ten columns offset-by-one',
+                style={'margin-top':35},    
+                children=[
+                html.Label(dcc.Markdown('**LEGO Themes:**')),
+                dcc.Checklist(
+                                options=checklist_dict,
+                                value=themes_unique,
+                                id='themes-checkbox'
+                            )
+                ])
+            ]),
     
     html.Div(className='seven columns offset-by-one',
             children=[
@@ -92,7 +92,7 @@ app.layout = html.Div(className='row',children=[
                                 id='themes-year-graph'
                             ),
 
-                            dcc.Graph(
+                    dcc.Graph(
                                 id='parts-year-graph'
                             )
                     ]
