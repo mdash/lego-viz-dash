@@ -2,6 +2,8 @@
 
 A simple dashboard-app to help visualize the trends in Lego sets over the years built with Dash (by plotly)   
 
+Link for the app - [Heroku](https://lego-viz-mdash.herokuapp.com/)
+
 ## Getting Started
 
 WIP - to be added
